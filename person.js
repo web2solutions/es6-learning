@@ -24,6 +24,10 @@ class person {
   set hairColor(color){
   	this.hair = color;
   }
+
+  static changeEyes() {
+    this.eyes = 1;
+  }
 }
 
 export default person;

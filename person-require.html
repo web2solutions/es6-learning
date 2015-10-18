@@ -24,9 +24,36 @@
             maria.speak();
             maria.hairColor = 'blonde';
 
+
+
             console.log(  maria.hair );
             console.log(  maria.gender );
+            console.log(  maria.eyes );
             console.log(  maria instanceof person.default );
+            console.log(  maria instanceof women.default );
+
+
+            // call class static method
+            person.default.changeEyes();
+            
+            let ringo = new person.default('Ringo');
+
+            ringo.walk();
+            ringo.speak();
+
+            console.log(  ringo.hair );
+            //console.log(  ringo.gender );
+            console.log(  ringo.eyes );
+            console.log(  ringo instanceof person.default );
+            
+
+            person.default.changeEyes();
+            console.log(  ringo.eyes );
+            
+
+
+
+
           });
         });
       });
