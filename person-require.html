@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, World!</title>
+    <script src="../traceur-compiler/bin/traceur.js"></script>
+    <script src="../traceur-compiler/src/bootstrap.js"></script>
+  </head>
+  <body>
+    <!-- <script type="module" src="person.js"></script>
+    <script type="module" src="women.js"></script>
+    <script type="module" src="men.js"></script> -->
+    <script type="module">
+
+
+      var person = require('./person');
+      var men = require('./men')
+      var women = require('./women')
+
+      
+      //import person from 'person';
+      //import men from 'men';
+      //import women from 'women';
+
+      let james = new men('James');
+      james.walk();
+      james.speak();
+
+      let maria = new women('Maria');
+      maria.walk();
+      maria.speak();
+      maria.hairColor = 'blonde';
+
+      console.log(  maria.hair );
+      console.log(  maria.gender );
+      console.log(  maria instanceof person );
+
+
+
+    </script>
+    <div id="log"></div>
+  </body>
+</html>

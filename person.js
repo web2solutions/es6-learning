@@ -1,4 +1,5 @@
 'use strict';
+
 class person {
   constructor(name) {
     this.eyes = 2;
