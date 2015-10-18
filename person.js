@@ -1,42 +1,28 @@
 'use strict';
-export default class person {
-  constructor(message) {
+class person {
+  constructor(name) {
     this.eyes = 2;
     this.ears = 2;
     this.arms = 2;
     this.foot = 2;
+    this.name = name;
+    this.hair = 'black';
   }
 
   speak() {
     let element = document.querySelector('#log');
-    element.textContent += "I'm speaking .... ";
+    element.innerHTML += this.name + " is speaking .... <br> ";
   }
 
   walk() {
     let element = document.querySelector('#log');
-    element.textContent += "I'm walking .... ";
+    element.innerHTML += this.name + " is walking .... <br> ";
+    //element.textContent += this.name + " is walking .... <br> ";
+  }
+
+  set hairColor(color){
+  	this.hair = color;
   }
 }
 
-
-class women extends person {
-  constructor() {
-    this.gender = 'female';
-    this.clother = 'pink';
-  }
-}
-
-
-class men extends person {
-  constructor() {
-    this.gender = 'male';
-    this.clother = 'blue';
-  }
-}
-
-
-
-//export let greeter = new person('Hello World!');
-//greeter.greet();
-
-//console.log(greeter);
+export default person;

@@ -7,13 +7,33 @@
   </head>
   <body>
     <script type="module" src="person.js"></script>
+    <script type="module" src="women.js"></script>
+    <script type="module" src="men.js"></script>
     <script type="module">
-      import person from 'person';
+      
+      import person from 'person.js';
+      import men from 'men.js';
+      import women from 'women.js';
 
-      let greeter = new person();
-      //greeter.greet();
+      let james = new men('James');
+      james.walk();
+      james.speak();
 
-      //console.log(greeter);
+
+      let maria = new women('Maria');
+      maria.walk();
+      maria.speak();
+      
+      console.log(  maria.hair );
+      
+      maria.hairColor = 'blonde';
+
+      console.log(  maria.hair );
+
+      console.log(  maria instanceof person );
+
+
+
     </script>
     <div id="log"></div>
   </body>
