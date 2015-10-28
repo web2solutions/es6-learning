@@ -11,9 +11,9 @@
     <script type="module" src="men.js"></script>
     <script type="module">
       
-      import person from 'person';
-      import men from 'men';
-      import women from 'women';
+      import person from 'person.js';
+      import men from 'men.js';
+      import women from 'women.js';
 
       let james = new men('James');
       james.walk();
@@ -27,14 +27,14 @@
       console.log(  maria.hair );
       console.log(  maria.gender );
       console.log(  maria.eyes );
-      console.log(  maria instanceof person.default );
-      console.log(  maria instanceof women.default );
+      console.log(  maria instanceof person);
+      console.log(  maria instanceof women);
 
 
       // call class static method
-      person.default.changeEyes();
+      person.changeEyes();
       
-      let ringo = new person.default('Ringo');
+      let ringo = new person('Ringo');
 
       ringo.walk();
       ringo.speak();
@@ -42,10 +42,10 @@
       console.log(  ringo.hair );
       //console.log(  ringo.gender );
       console.log(  ringo.eyes );
-      console.log(  ringo instanceof person.default );
+      console.log(  ringo instanceof person );
       
 
-      person.default.changeEyes();
+      person.changeEyes();
       console.log(  ringo.eyes );
 
 

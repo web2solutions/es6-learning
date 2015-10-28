@@ -11,6 +11,3 @@ class Greeter {
 }
 
 export let greeter = new Greeter('Hello World!');
-greeter.greet();
-
-console.log(greeter);

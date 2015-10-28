@@ -1,6 +1,6 @@
 'use strict';
 
-import person from 'person';
+import person from 'person.js';
 
 class men extends person {
   constructor(name) {
